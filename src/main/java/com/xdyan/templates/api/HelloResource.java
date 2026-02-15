@@ -1,13 +1,14 @@
 package com.xdyan.templates.api;
 
+import com.xdyan.templates.api.model.HelloResponse;
 import jakarta.ws.rs.core.Response;
 
-import java.util.Map;
+public final class HelloResource implements DefaultResource {
 
-public class HelloResource implements DefaultResource {
   @Override
   public Response getHello() {
-    var map = Map.of("message", "Hello World");
-    return Response.ok(map).build();
+    var helloResponse = new HelloResponse()
+        .message("Hello World");
+    return Response.ok(helloResponse).build();
   }
 }

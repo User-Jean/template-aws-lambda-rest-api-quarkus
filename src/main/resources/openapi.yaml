@@ -17,14 +17,16 @@ paths:
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: "Hello world"
-              examples:
-                example:
-                  summary: Response example
-                  value:
-                    message: "Hello world"
-
+                $ref: '#/components/schemas/HelloResponse'
+components:
+  schemas:
+    HelloResponse:
+      type: object
+      description: Response containing a greeting message
+      properties:
+        message:
+          type: string
+          description: The greeting text
+          example: "Hello world"
+      required:
+        - message
