@@ -1,0 +1,23 @@
+app:
+  name: @project.artifactId@
+  version: @project.version@
+  group: @project.groupId@
+
+quarkus:
+  http:
+    root-path: /xdyan/template/v1
+  log:
+    level: ERROR
+    category:
+      "com.xdyan.templates":
+        level: INFO
+    console:
+      json:
+        excluded-keys: sequence,processName,hostName,processId,threadName,threadId,ndc,loggerClassName
+        additional-field:
+          app_name:
+            value: "${app.name}"
+          app_group:
+            value: "${app.group}"
+          app_version:
+            value: "${app.version}"

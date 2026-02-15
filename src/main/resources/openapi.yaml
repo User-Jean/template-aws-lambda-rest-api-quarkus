@@ -1,0 +1,30 @@
+openapi: "3.0.3"
+info:
+  title: Hello World API
+  version: "1.0.0"
+  description: Minimal template API that returns "Hello world"
+servers:
+  - url: http://localhost:8080
+    description: Local server
+paths:
+  /hello:
+    get:
+      summary: Returns a greeting
+      operationId: getHello
+      responses:
+        '200':
+          description: Successful response with greeting message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello world"
+              examples:
+                example:
+                  summary: Response example
+                  value:
+                    message: "Hello world"
+

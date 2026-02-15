@@ -1,0 +1,11 @@
+quarkus:
+  devservices:
+    enabled: false
+  log:
+    category:
+      "com.xdyan.templates":
+        level: ERROR
+    console:
+      format: "%d{yyyy-MM-dd HH:mm:ss.SSSZ} %-5p [%c] (%t) %s%e%n"
+      json:
+        enabled: false
