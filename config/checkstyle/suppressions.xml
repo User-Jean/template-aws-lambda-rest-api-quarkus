@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Checkstyle//DTD SuppressionFilter Configuration 1.2//EN"
+    "https://checkstyle.org/dtds/suppressions_1_2.dtd">
+<suppressions>
+  <!-- Suppress generated sources (openapi generator output) -->
+  <suppress files=".*generated.*" checks=".*"/>
+
+  <!--
+    Suppression explanation (ENGLISH):
+
+    This entry disables the Checkstyle check named "JavadocMethod" for all
+    files whose path matches the regular expression "src/main/java/.*".
+
+    Important: while this suppression applies, Checkstyle will not require
+    method Javadoc in those matched files — so it is not necessary to add
+    Javadoc comments for methods in these files solely to satisfy Checkstyle.
+  -->
+  <suppress files="src/main/java/.*" checks="JavadocMethod"/>
+
+  <suppress checks="JavadocPackage" files="com/xdyan/.*"/>
+</suppressions>
